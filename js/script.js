@@ -49,8 +49,10 @@ export async function showNavItems(array, className){
     animationPlaying = false  
 }
 
+const menu_panel = document.getElementById('menu-panel')
+
 window.addEventListener('wheel', e => {//controls nav bar
-    if(!animationPlaying){
+    if(!animationPlaying && !menu_panel.classList.contains('show')){
         let filteredNavItems = (window.innerWidth < 576) ? navItems : navItems.filter(node => node.id !== 'menu')
         animationPlaying = true
         if(e.deltaY > 0){
@@ -64,6 +66,7 @@ window.addEventListener('wheel', e => {//controls nav bar
 const navItem_container = document.getElementById('nav-items')
 const menu = document.getElementById('menu');
 
+
 async function checkResize(){
     const menuActive = menu.classList.contains('show')
 
@@ -72,6 +75,7 @@ async function checkResize(){
         if(!menuActive){
             navItem_container.classList.add('noDisplay')
             menu.classList.add('show')
+            menu_panel.classList.add('show')
         }
     }
     else{
@@ -79,6 +83,7 @@ async function checkResize(){
         if(menuActive){
             navItem_container.classList.remove('noDisplay')
             menu.classList.remove('show')
+            menu_panel.classList.remove('show')
         }
     }
 }

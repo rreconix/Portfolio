@@ -5,11 +5,35 @@
 }
 
 html, body{
+    position: relative;
     width: 100vw;
 }
 
-body{
+.video{
+    width: 100vw;
+    object-fit: cover;
+    height: 100vh;
+    position: fixed;
+}
+
+.video:last-of-type{
+    display: none;
+}
+
+.video:last-of-type{
+    display: block;
+}
+
+.backgroundColor{
+    position: absolute;
     background: linear-gradient(to left top,rgb(56, 77, 100), rgb(20, 30, 48));
+    opacity: 0.8;
+
+    width: 100%;
+    height: 100%;
+}
+
+body{
     font-family: sans-serif;
 }
 
@@ -84,7 +108,6 @@ nav{
     top: 0;
     left: 0;
 
-    background: linear-gradient(to left top,rgb(56, 77, 100), rgb(20, 30, 48));
     transform: translate(100vw, 0);
     overflow: hidden;
 }
