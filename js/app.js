@@ -1,12 +1,20 @@
-export function writeAboutMe(container, text){
-    for(const word of text.split(' ')){
-        const parent_span = document.createElement('span');
-        parent_span.className = 'item'
+export function generateSpans(container, text, createParent){
+    for(const word of text){
+
         const child_span = document.createElement('span')
-        child_span.className = 'animated-span'
-        child_span.innerHTML = word + '&nbsp'
-        parent_span.appendChild(child_span)
-        container.appendChild(parent_span)
+        child_span.innerHTML = word;
+        child_span.className = word == ' ' ? 'animated-span line-break' : 'animated-span'
+
+        if(createParent){
+            const parent_span = document.createElement('span');
+            parent_span.className = 'item' 
+
+            parent_span.appendChild(child_span)
+            container.appendChild(parent_span)
+        }
+        else{
+            container.appendChild(child_span)
+        }
     }
 }
 
@@ -22,22 +30,6 @@ export function toggleClass(children, className){
 
 export function checkForClass(children, className){
     return children.every(node => node.classList.contains(className));
-}
-
-function addSpans(parent, title){
-    for(const letter of [...title]){
-        const childSpan = document.createElement('span')
-        if(letter == ' '){
-            childSpan.classList = 'line-break'
-        }
-        else{
-            childSpan.innerHTML = letter
-            childSpan.className = 'animated-span'
-        }
-        
-
-        parent.appendChild(childSpan)
-    }
 }
 
 const allProjects = document.getElementById('projects');
@@ -63,7 +55,8 @@ export function appendProjects(projects){
         project_container.appendChild(project_title)
         project_container.appendChild(image_container)
         image_container.appendChild(image)
-        addSpans(project_title, project.name)
+        
+        generateSpans(project_title, project.name.split(''), false)
     }
 }
 
@@ -90,11 +83,12 @@ export function toggleMenu(){
     burgerBtn.classList.toggle('click')
 }
 
-window.addEventListener('resize', () => {
+function resizeProjectTitle(){
+    
     const lineBreaks = [...document.getElementsByClassName('line-break')];
-
+    
     if(window.innerWidth < 576){
-        const filtered = lineBreaks.filter(node => node.innerHTML === '');
+        const filtered = lineBreaks.filter(node => node.innerHTML === ' ');
         if(filtered.length > 0){
             filtered.forEach(node => {
                 node.classList.add('single-line')
@@ -103,7 +97,7 @@ window.addEventListener('resize', () => {
         }
     }
     else{
-        const filtered = lineBreaks.filter(node => node.innerHTML !== '');
+        const filtered = lineBreaks.filter(node => node.innerHTML !== ' ');
 
         if(filtered.length > 0){
             filtered.forEach(node => {
@@ -112,4 +106,8 @@ window.addEventListener('resize', () => {
             })
         }
     }
-})
+}
+
+window.addEventListener('resize', resizeProjectTitle)
+
+window.addEventListener('load', resizeProjectTitle)

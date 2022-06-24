@@ -1,18 +1,16 @@
-import { appendProjects, writeAboutMe, sleep, toggleMenu } from "./app.js";
+import { appendProjects, generateSpans, sleep, toggleMenu } from "./app.js";
 
 const navItems = [...document.getElementsByClassName('nav-item')]
 
 let animationPlaying = false;
 
-const box = document.getElementsByTagName('nav')[0]
-const projectsBox = document.getElementById('main-title')
-
-function scrollToHome(){
-    box.scrollIntoView({behavior: "smooth"}), {passive: true}
+const scroll = {
+    home: document.body,
+    projects: document.getElementById('main-title')
 }
 
-function scrollToProjects(){
-    projectsBox.scrollIntoView({behavior: "smooth"}), {passive: true}
+function scrollTo(element){
+    scroll[element].scrollIntoView({behavior: "smooth"}), {passive: true}
 }
 
 export const projects = [
@@ -47,74 +45,60 @@ export async function showNavItems(array, className){
         
         await sleep(100)
 
-        if(i == array.length - 1) animationPlaying = false  
     }
+    animationPlaying = false  
 }
 
-const menu = document.getElementById('menu');
-
-
-
-
-window.onwheel = e => {//controls nav bar
-    let filteredNavItems = (window.innerWidth < 576) ? navItems : navItems.filter(node => node.id !== 'menu')
+window.addEventListener('wheel', e => {//controls nav bar
     if(!animationPlaying){
+        let filteredNavItems = (window.innerWidth < 576) ? navItems : navItems.filter(node => node.id !== 'menu')
         animationPlaying = true
         if(e.deltaY > 0){
-            showNavItems(filteredNavItems.slice().reverse(), 'hide', true)
+            showNavItems(filteredNavItems.slice().reverse(), 'hide')
         }
         
         else showNavItems(filteredNavItems, 'show')
     }
-}
+})
 
 const navItem_container = document.getElementById('nav-items')
-
+const menu = document.getElementById('menu');
 
 async function checkResize(){
     const menuActive = menu.classList.contains('show')
 
     if(window.innerWidth < 576){
 
-        navItem_container.classList.add('noDisplay')
-
         if(!menuActive){
+            navItem_container.classList.add('noDisplay')
             menu.classList.add('show')
         }
     }
-    if(window.innerWidth > 576){
-        navItem_container.classList.remove('noDisplay')
+    else{
 
         if(menuActive){
+            navItem_container.classList.remove('noDisplay')
             menu.classList.remove('show')
         }
     }
 }
 
+window.addEventListener('resize', checkResize);
 
 
 document.getElementById('burgerBtn').onclick = toggleMenu
 
-window.onload = () => {
+window.addEventListener('load', () => {
     let filteredNavItems = (window.innerWidth < 576) ? navItems : navItems.filter(node => node.id !== 'menu')
-    showNavItems(filteredNavItems, 'show');
     checkResize()
-}
-
+    showNavItems(filteredNavItems, 'show');
+})
 
 
 const text_about_me = 'I am a young developer from New York City, I started my passion of web development in 7th grade, currently interested in HTML, CSS, JS.'
 
 const span_container = document.getElementById('span-container');
-writeAboutMe(span_container, text_about_me)
-
-
-
-
-
-window.onresize = () => {
-    checkResize()
-}   
+generateSpans(span_container, text_about_me.split(' ').join('&nbsp ').split(' '), true);
 
 
 [...document.getElementsByClassName('link')].forEach(link => {
@@ -123,12 +107,11 @@ window.onresize = () => {
         
         if(menu.classList.contains('show')) toggleMenu()
 
-        if(destination == 'github') window.open('https://github.com/rreconix')
-        if(destination == 'home') scrollToHome()
-        else if(destination == 'projects') scrollToProjects()
-        else{
+        if(destination.startsWith('https')){
             window.open(destination)
         }
-
+        else{
+            scrollTo(destination)
+        }
     })
 })

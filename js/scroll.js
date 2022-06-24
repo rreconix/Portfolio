@@ -9,7 +9,8 @@ const switchSpan = [...document.getElementsByClassName('switch')[0].children]
 
 window.addEventListener('scroll', () => {//everything up to projects
     
-    const pos = window.scrollY;//programmer -> student
+    //intro
+    const pos = window.scrollY;
     
     if(pos > 5 && !checkForClass(switchSpan.slice(1), 'hidden')){
         switchSpan[0].classList.remove('hidden')
@@ -20,7 +21,6 @@ window.addEventListener('scroll', () => {//everything up to projects
         switchSpan[0].classList.add('hidden')
         switchSpan[1].classList.remove('hidden')
     }
-
 
     //about me
 
@@ -51,9 +51,9 @@ function assignHeight(){
         image.style.height = imageWidth.slice(0, -2)/1.8  + 'px'
     }
 }
-assignHeight()
-window.addEventListener('resize', assignHeight)
 
+window.addEventListener('resize', assignHeight)
+window.addEventListener('load', assignHeight)
 window.addEventListener('scroll', () => {
 
     const titleBounding = main_title.getBoundingClientRect();
@@ -65,7 +65,7 @@ window.addEventListener('scroll', () => {
     })
 
     project_list.forEach(project => {
-        const project_title_spans = [...project.children[0].children]
+        const project_title_spans = [...project.children[0].querySelectorAll('.animated-span')]
         const image = [project.children[1].children[0]]
 
         const projectBounding = project.getBoundingClientRect();
