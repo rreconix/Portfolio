@@ -79,7 +79,14 @@ const menu_panel = document.getElementById('menu-panel')
 const burgerBtn = document.getElementById('burgerBtn')
 
 export function toggleMenu(){
-    menu_panel.classList.toggle('show')
+    if(menu_panel.classList.contains('show')){
+        menu_panel.classList.remove('show')
+        menu_panel.classList.add('hide')
+    }
+    else{
+        menu_panel.classList.add('show')
+        menu_panel.classList.remove('hide')
+    }
     burgerBtn.classList.toggle('click')
 }
 
