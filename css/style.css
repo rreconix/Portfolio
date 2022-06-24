@@ -9,7 +9,7 @@ html, body{
 }
 
 body{
-    background: linear-gradient(to left top,rgb(36, 59, 85, 0.9), rgb(20, 30, 48));
+    background: linear-gradient(to left top,rgb(56, 77, 100), rgb(20, 30, 48));
     font-family: sans-serif;
 }
 
@@ -84,7 +84,7 @@ nav{
     top: 0;
     left: 0;
 
-    background: linear-gradient(to left top,rgb(36, 59, 85, 0.9), rgb(20, 30, 48));
+    background: linear-gradient(to left top,rgb(56, 77, 100), rgb(20, 30, 48));
     transform: translate(100vw, 0);
     transition: transform 400ms;
     overflow: hidden;
