@@ -4,7 +4,7 @@ const navItems = [...document.getElementsByClassName('nav-item')]
 
 let animationPlaying = false;
 
-const box = document.getElementById('invisible-box');
+const box = document.getElementsByTagName('nav')[0]
 const projectsBox = document.getElementById('main-title')
 
 function scrollToHome(){
@@ -14,6 +14,31 @@ function scrollToHome(){
 function scrollToProjects(){
     projectsBox.scrollIntoView({behavior: "smooth"}), {passive: true}
 }
+
+export const projects = [
+    {
+        name: 'wordle',
+        src: './images/wordle.png',
+        link: 'https://wordle.felixx-h.repl.co/',
+    },
+    {
+        name: 'Fractal Tree',
+        src: './images/fractal.png',
+        link: 'https://fractal-tree.felixx-h.repl.co/'
+    },
+    {
+        name: 'lmgtfy',
+        src: './images/lmgtfy.png',
+        link: 'https://lmgtfy.felixx-h.repl.co/'
+    },
+    {
+        name: 'clock',
+        src: './images/clock.png',
+        link: 'https://clock.felixx-h.repl.co/'
+    }
+]
+
+appendProjects(projects)
 
 export async function showNavItems(array, className){
     let i = 0;
@@ -83,30 +108,7 @@ const text_about_me = 'I am a young developer from New York City, I started my p
 const span_container = document.getElementById('span-container');
 writeAboutMe(span_container, text_about_me)
 
-export const projects = [
-    {
-        name: 'wordle',
-        src: './images/wordle.png',
-        link: 'https://wordle.felixx-h.repl.co/',
-    },
-    {
-        name: 'Fractal Tree',
-        src: './images/fractal.png',
-        link: 'https://fractal-tree.felixx-h.repl.co/'
-    },
-    {
-        name: 'lmgtfy',
-        src: './images/lmgtfy.png',
-        link: 'https://lmgtfy.felixx-h.repl.co/'
-    },
-    {
-        name: 'clock',
-        src: './images/clock.png',
-        link: 'https://clock.felixx-h.repl.co/'
-    }
-]
 
-appendProjects(projects)
 
 
 

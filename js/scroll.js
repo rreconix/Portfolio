@@ -54,8 +54,6 @@ function assignHeight(){
 assignHeight()
 window.addEventListener('resize', assignHeight)
 
-
-
 window.addEventListener('scroll', () => {
 
     const titleBounding = main_title.getBoundingClientRect();
@@ -80,4 +78,3 @@ window.addEventListener('scroll', () => {
     })
 
 })
-
