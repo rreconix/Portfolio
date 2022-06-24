@@ -90,14 +90,14 @@ export const projects = [
         link: 'https://wordle.felixx-h.repl.co/',
     },
     {
-        name: 'lmgtfy',
-        src: './images/lmgtfy.png',
-        link: 'https://lmgtfy.felixx-h.repl.co/'
-    },
-    {
         name: 'Fractal Tree',
         src: './images/fractal.png',
         link: 'https://fractal-tree.felixx-h.repl.co/'
+    },
+    {
+        name: 'lmgtfy',
+        src: './images/lmgtfy.png',
+        link: 'https://lmgtfy.felixx-h.repl.co/'
     },
     {
         name: 'clock',
