@@ -1,0 +1,178 @@
+@media (min-width: 1440px){
+    #intro{
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+}
+
+@media (max-width:1100px){
+    .project-title{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    #main-title{
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    #intro{
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+}
+
+@media (max-width:992px){
+    #main-title{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    #homepage{
+        margin: 0 75px;
+    }
+    .project-title{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    #intro{
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+}
+
+@media (max-width: 830px){
+    .project-title{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    #main-title{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+    #intro{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media(min-width: 769px){
+    .image-container{
+        width: 55vw;
+    }
+}
+
+@media(max-width: 768px){
+
+    nav{
+        padding: 10px 50px;
+    }
+
+    .image-container{
+        width: 65vw;
+    }
+
+    #intro-page{
+        padding: 0;
+    }
+
+    #main-title{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    #homepage{
+        margin: 0 50px;
+    }
+
+    .project-title{
+        width: 15vw;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+}
+
+@media (max-width: 642px) {
+    #intro{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+}
+
+
+@media(max-width: 576px){
+    nav{
+        padding: 10px 25px;
+    }
+
+    .image-container{
+        width: 100%;
+    }
+    .project{
+        display: block;
+    }
+    .project-title{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    #main-title{
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 50px;
+    }
+    #about-me{
+        align-items: flex-start;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    
+    #homepage{
+        margin: 0 25px;
+    }
+
+    #span-container{
+        font-size: 1.6rem;
+        height: auto;
+        line-height: 3rem;
+        padding: 50px 0;
+    }
+}
+
+@media(max-width: 520px){
+    #intro{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 450px){
+    #span-container{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    #intro{
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+
+    .project-title{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #main-title{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 450px){
+}
+
+@media (max-width: 250px){
+    #intro{
+        font-size: 1rem;
+    }
+}
