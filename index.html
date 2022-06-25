@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
 
-    <video class='video' src='https://margelo.io/assets/masthead-bg.webm' autoplay muted loop></video>
-    <div class="backgroundColor"></div>
+  <video class='video' src='https://margelo.io/assets/masthead-bg.webm' autoplay muted loop></video>
+  <div class="backgroundColor"></div>
 
-    <nav>
-        
-        <div id="logo-container">
-            <div id="logo">
-                <img class ='nav-item' src="http://www.alexandrepujol.com/static/media/logo.3f7ab07da4e35bf1074e528aae8e9dfc.svg" alt="Logo"> 
-            </div>
+  <nav>
+      
+      <div id="logo-container">
+        <div id="logo">
+          <img class ='nav-item' src="http://www.alexandrepujol.com/static/media/logo.3f7ab07da4e35bf1074e528aae8e9dfc.svg" alt="Logo"> 
         </div>
+      </div>
 
-        <div class="nav-item" id="menu">
+      <div class="nav-item" id="menu">
+        <div id="menu-panel">
+          <video class='video' src='https://margelo.io/assets/masthead-bg.webm' autoplay muted loop></video>
+          <div class="backgroundColor"></div>
+          <div id="menu-panel-links">
             
-            <div id="menu-panel">
-                <video class='video' src='https://margelo.io/assets/masthead-bg.webm' autoplay muted loop></video>
-                <div class="backgroundColor"></div>
-                <div id="menu-panel-links">
-                    <span data-to="home" class="link">
-                        <span>H</span><span>O</span><span>M</span><span>E</span>
-                    </span>
-                    <span data-to="projects" class="link">
-                        <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>C</span><span>T</span><span>S</span>
-                    </span>
-                    <span data-to='https://github.com/rreconix' class="link">
-                        <span>G</span><span>I</span><span>T</span><span>H</span><span>U</span><span>B</span>
-                    </span>
-                </div>
-            </div>
-
-            <div id="burgerBtn">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
-        
-        <div id="nav-items">
-            <div class="nav-item">
-                <div data-to="home" class='link nav-item-text'>Home</div>
-            </div>
-
-            <div class="nav-item">
-                <div data-to="projects" class='link nav-item-text'>Projects</div>
-            </div>
-
-            <div class="nav-item">
-                <div data-to='https://github.com/rreconix' class='link nav-item-text'>GitHub</div>
-            </div>
-
+            <span data-to="home" class="link">
+                <span>H</span><span>O</span><span>M</span><span>E</span>
+            </span>
             
-        </div>
-        
-    </nav>
-
-    <div id="homepage">
-        <div id="intro-page">
-            <h1 id="intro">
-                <span class="item">Hello,</span>
-                
-                <span class="item">I'm</span>
-                <span class="item">Felix,&nbsp</span>
-                <br>
-                <span class="item switch">
-                    <span class="programmer hidden">programmer</span>
-                    <span class="student item">student</span>
-                </span>
-            </h1>
+            <span data-to="projects" class="link">
+                <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>C</span><span>T</span><span>S</span>
+            </span>
+            
+            <span data-to='https://github.com/rreconix' class="link">
+                <span>G</span><span>I</span><span>T</span><span>H</span><span>U</span><span>B</span>
+            </span>
+            
+          </div>
         </div>
 
-        <div id="about-me">
-            <div id="span-container"></div>
+        <div id="burgerBtn">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      
+      <div id="nav-items">
+        <div class="nav-item">
+          <div data-to="home" class='link nav-item-text'>Home</div>
         </div>
 
-        <div id="projects">
-            <h2 id="main-title">
-                <span class="item">
-                    <span class="animated-span show">PROJECTS</span>
-                </span>
-            </h2>
+        <div class="nav-item">
+          <div data-to="projects" class='link nav-item-text'>Projects</div>
         </div>
 
-        
+        <div class="nav-item">
+          <div data-to='https://github.com/rreconix' class='link nav-item-text'>GitHub</div>
+        </div>
+      </div>
+      
+  </nav>
+
+  <div id="homepage">
+    <div id="intro-page">
+      <h1 id="intro">
+        <span class="item">Hello,</span>
+          
+        <span class="item">I'm</span>
+        <span class="item">Felix,&nbsp</span>
+        <br>
+        <span class="item switch">
+            <span class="programmer hidden">programmer</span>
+            <span class="student item">student</span>
+        </span>
+      </h1>
     </div>
-    <div id="end-space"></div>
-    <script src="./js/script.js" type="module"></script>
-    <script src="./js/scroll.js" type="module"></script>
+
+    <div id="about-me">
+      <div id="span-container"></div>
+    </div>
+
+    <div id="projects">
+      <h2 id="main-title">
+        <span class="item">
+          <span class="animated-span show">PROJECTS</span>
+        </span>
+      </h2>
+    </div>
+
+      
+  </div>
+  
+  <div id="end-space"></div>
+  
+  <script src="./js/script.js" type="module"></script>
+  <script src="./js/scroll.js" type="module"></script>
+  
 </body>
 </html>
