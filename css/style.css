@@ -70,124 +70,123 @@ nav{
 
 
 #nav-items{
-    display: flex;
+  display: flex;
 }
 
 .nav-item{
-    color: white;
-    display: flex;
-    font-size: 1.2rem;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    transform: translateY(-125px);
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transform: translateY(-150px);
+  transition: transform 500ms;
 }   
 
 .noDisplay{
-    display: none !important;
+  display: none !important;
 }
 
 #menu{
-    animation: none;
-    transition: transform 400ms;
-    transform: translateY(-150px);
+  animation: none;
+  transition: transform 400ms;
+  transform: translateY(-150px);
 }
 
 #menu.show{
-    transform: none;
+  transform: none;
 }
 
 #menu-panel{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
 
-    transform: translate(100vw, 0);
-    overflow: hidden;
+  transform: translate(100vw, 0);
+  overflow: hidden;
 }
 
 #menu-panel.hide, #menu-panel.show{
-    transition: transform 400ms;
+  transition: transform 400ms;
 }
 
 #menu-panel.show{
-    transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
 }
 
 #menu-panel-links{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
 .link{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #menu-panel-links .link span{
-    font-size: 4rem;
-    line-height: 6rem;
-    display: inline-block;
+  font-size: 4rem;
+  line-height: 6rem;
+  display: inline-block;
 }
 
 
 
 #burgerBtn{
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    transform: translate(0px, 0px);
-    width: 40px;
-    height: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(0px, 0px);
+  width: 40px;
+  height: 15px;
 }
 
 #burgerBtn.click .line:first-of-type{
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #burgerBtn.click .line:last-of-type{
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .line{
-    width: 100%;
-    background-color: white;
-    height: 2px;
-    transition: transform 300ms;
+  width: 100%;
+  background-color: white;
+  height: 2px;
+  transition: transform 300ms;
 }
 
 .line:first-of-type{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
 .nav-item-text{
-    margin-left: 70px;
-    cursor: pointer;
+  margin-left: 70px;
+  cursor: pointer;
 }
 
 img.nav-item{
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .nav-item.show{
-    animation: showNavItems 600ms ease-in-out forwards;
+  transform: translate(0px, 0px);
 }
 
-.nav-item.hide{
-    animation: hideNavItems 300ms ease-in-out forwards;
-}
 
 *.animated-span.show{
-    transform: translate(0px, 0px) !important;
+  transform: translate(0px, 0px) !important;
 }
 
 
@@ -195,46 +194,46 @@ img.nav-item{
 
 
 #intro-page{
-    display: flex;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 #intro{
-    font-size: 4rem;
-    max-width: 500px;
-    position: relative;
+  font-size: 4rem;
+  max-width: 500px;
+  position: relative;
 }
 
 .item{
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
 }
 
 #intro .item.switch{
-    width: 140%;
+  width: 140%;
 }
 
 .switch span{
-    transition: transform 500ms;
+  transition: transform 500ms;
 }
 
 .programmer.hidden{
-    transform: translate(0px, -128px);
+  transform: translate(0px, -128px);
 }
 
 .programmer{
-    position: absolute;
-    transform: translate(0px, 0px);
+  position: absolute;
+  transform: translate(0px, 0px);
 }
 
 .student.hidden{
-    transform: translate(0%, 110%);
+  transform: translate(0%, 110%);
 }
 
 .student{
-    transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
 }
 
 
@@ -245,19 +244,19 @@ img.nav-item{
 
 
 #about-me{
-    display: flex;
-    margin: 100px 0 500px;
-    font-size: 4rem;
+  display: flex;
+  margin: 100px 0 500px;
+  font-size: 4rem;
 }
 
 #span-container, #intro{
-    line-height: 5rem;
+  line-height: 5rem;
 }
 
 #about-me .animated-span{
-    transform: translate(0px, 120px);
-    display: inline-block;
-    transition: transform 500ms ease-in;
+  transform: translate(0px, 120px);
+  display: inline-block;
+  transition: transform 500ms ease-in;
 }
 
 
@@ -268,80 +267,71 @@ img.nav-item{
 
 
 #projects{
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 #main-title{
-    margin-bottom: 0.5em;
-    font-size: 5rem;
-    line-height: 5.5rem;
+  margin-bottom: 0.5em;
+  font-size: 5rem;
+  line-height: 5.5rem;
 }
 
 .project-title{
-    font-size: 4rem;
-    line-height: 4rem;
-    position: relative;
-    height: fit-content;
-    text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 4rem;
+  position: relative;
+  height: fit-content;
+  text-transform: uppercase;
 }
 
 #main-title .animated-span, .project-title .animated-span{
-    transform: translateY(300px);
-    display: inline-block;
-    transition: transform 500ms;
+  transform: translateY(300px);
+  display: inline-block;
+  transition: transform 500ms;
 }
 
 .project{
-    margin-bottom: 20px;
-    display: flex;
-    height: auto;
-    justify-content: space-between;
-    column-gap: 5vw;
+  margin-bottom: 20px;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  column-gap: 5vw;
 }
 
 .project:nth-child(even){
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .image-container{
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .project-image{
-    width: 0%;
-    transition: width 700ms, transform 700ms;
-    aspect-ratio: 1.8/1;
-    object-fit: cover;
-    transform: scale(2);
+  width: 0%;
+  transition: width 700ms, transform 700ms;
+  aspect-ratio: 1.8/1;
+  object-fit: cover;
+  transform: scale(2);
 }
 
 .project-image.show{
-    transform: scale(1);
-    width: 100%;
+  transform: scale(1);
+  width: 100%;
 }
 
 
 .project-title .line-break{
-    display: block;
+  display: block;
 }
 
 .line-break.single-line{
-    display: inline-block;
+  display: inline-block;
 }
 
 #end-space{
-    height: 30vh;
-    width: 100vw;
-}
-
-#scroll{
-    position: fixed;
-    height: 100px;
-    width: 50px;
-    background-color: white;
-    bottom: 30px;
-    right: 20px;
+  height: 30vh;
+  width: 100vw;
 }
