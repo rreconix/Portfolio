@@ -337,21 +337,11 @@ img.nav-item{
     width: 100vw;
 }
 
-@keyframes showNavItems {
-    0%{
-        transform: translateY(-150px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
+#scroll{
+    position: fixed;
+    height: 100px;
+    width: 50px;
+    background-color: white;
+    bottom: 30px;
+    right: 20px;
 }
-
-@keyframes hideNavItems {
-    0%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-150px);
-    }
-}
-

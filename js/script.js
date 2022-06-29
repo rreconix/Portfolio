@@ -33,6 +33,11 @@ export const projects = [
         name: 'clock',
         src: './images/clock.png',
         link: 'https://clock.felixx-h.repl.co/'
+    },
+    {
+        name: 'snake',
+        src: './images/snake.png',
+        link: 'https://snakegame.felixx-h.repl.co/'
     }
 ]
 
