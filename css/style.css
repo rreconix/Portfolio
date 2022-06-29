@@ -70,7 +70,7 @@ nav{
 
 
 #nav-items{
-    display: flex;
+  display: flex;
 }
 
 .nav-item{
@@ -81,6 +81,7 @@ nav{
   align-items: center;
   text-transform: uppercase;
   transform: translateY(-150px);
+  transition: transform 500ms;
 }   
 
 .noDisplay{
