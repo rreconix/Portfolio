@@ -14,31 +14,36 @@ function scrollTo(element){
 }
 
 export const projects = [
-    {
-        name: 'wordle',
-        src: './images/wordle.png',
-        link: 'https://wordle.felixx-h.repl.co/',
-    },
-    {
-        name: 'Fractal Tree',
-        src: './images/fractal.png',
-        link: 'https://fractal-tree.felixx-h.repl.co/'
-    },
-    {
-        name: 'lmgtfy',
-        src: './images/lmgtfy.png',
-        link: 'https://lmgtfy.felixx-h.repl.co/'
-    },
-    {
-        name: 'clock',
-        src: './images/clock.png',
-        link: 'https://clock.felixx-h.repl.co/'
-    },
-    {
-        name: 'snake',
-        src: './images/snake.png',
-        link: 'https://snakegame.felixx-h.repl.co/'
-    }
+  {
+    name: 'wordle',
+    src: './images/wordle.png',
+    link: 'https://wordle.felixx-h.repl.co/',
+  },
+  {
+    name: 'Fractal Tree',
+    src: './images/fractal.png',
+    link: 'https://fractal-tree.felixx-h.repl.co/'
+  },
+  {
+    name: 'lmgtfy',
+    src: './images/lmgtfy.png',
+    link: 'https://lmgtfy.felixx-h.repl.co/'
+  },
+  {
+    name: 'clock',
+    src: './images/clock.png',
+    link: 'https://clock.felixx-h.repl.co/'
+  },
+  {
+    name: 'snake',
+    src: './images/snake.png',
+    link: 'https://snakegame.felixx-h.repl.co/'
+  },
+  {
+    name: 'chrome extension',
+    src: './images/extension.png',
+    link: 'https://chrome.google.com/webstore/detail/color-picker/bgbfgaaibhpepheabkdeniilmcljibob'
+  }
 ]
 
 appendProjects(projects)
